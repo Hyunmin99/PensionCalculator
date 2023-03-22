@@ -9,8 +9,6 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export"
-    // "predeploy": "npm run build"
-    // "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "@chatscope/chat-ui-kit-react": "^1.10.1",
