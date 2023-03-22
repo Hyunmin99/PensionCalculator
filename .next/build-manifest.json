@@ -34,6 +34,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/chatGPT.js"
+    ],
+    "/pension": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/pension.js"
     ]
   },
   "ampFirstPages": []
