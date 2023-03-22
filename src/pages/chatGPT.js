@@ -17,7 +17,7 @@ function ChatGPT() {
     {
       message: "투자에 대한 고민을 말해주세요.",
       sender: "ChatGPT",
-    },
+    }, 
   ]);
 
   const handleSend = async (message) => {
