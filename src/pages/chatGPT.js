@@ -90,6 +90,7 @@ export default function ChatGPT() {
       })
       .catch((err) => {
         console.log({ err });
+        console.log(API_KEY);
       }); ;
   }
 
