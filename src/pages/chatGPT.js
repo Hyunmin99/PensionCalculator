@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
   MainContainer,
@@ -87,7 +87,10 @@ export default function ChatGPT() {
           },
         ]);
         setTyping(false);
-      });
+      })
+      .catch((err) => {
+        console.log({ err });
+      }); ;
   }
 
   return (
