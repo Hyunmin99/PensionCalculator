@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import {
   MainContainer,
@@ -11,7 +11,7 @@ import {
 
 const API_KEY = process.env.NEXT_PUBLIC_CHATGPT_API_KEY;
 
-function ChatGPT() {
+export default function ChatGPT() {
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([
     {
@@ -114,4 +114,3 @@ function ChatGPT() {
   );
 }
 
-export default ChatGPT;
