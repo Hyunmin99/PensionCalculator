@@ -74,24 +74,27 @@ export default function ChatGPT() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(apiRequestBody),
+      cache: "no-store"
     })
       .then((data) => {
         return data.json();
       })
+      // .catch((err) => {
+      //   console.log({ err });
+      //   console.log(API_KEY);
+      // })
       .then((data) => {
+        console.log(data);
         setMessages([
           ...chatMessages,
           {
-            message: data.choices[0].message.content,
+            message: data.choice[0],
             sender: "ChatGPT",
           },
         ]);
         setTyping(false);
-      })
-      .catch((err) => {
-        console.log({ err });
-        console.log(API_KEY);
-      }); ;
+      });
+      
   }
 
   return (
@@ -106,7 +109,6 @@ export default function ChatGPT() {
               }
             >
               {messages.map((message, i) => {
-                console.log(i, message);
                 return <Message key={i} model={message} />;
               })}
             </MessageList>
