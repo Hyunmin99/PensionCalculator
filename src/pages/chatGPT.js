@@ -8,6 +8,8 @@ import {
   MessageInput,
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
+import dotenv from "dotenv";
+dotenv.config();
 
 const API_KEY = process.env.NEXT_PUBLIC_CHATGPT_API_KEY;
 
@@ -88,7 +90,7 @@ export default function ChatGPT() {
         setMessages([
           ...chatMessages,
           {
-            message: data.choice[0],
+            message: data.choices[0].message.content,
             sender: "ChatGPT",
           },
         ]);
